@@ -1,0 +1,24 @@
+// Typography
+$base-font-family: $font-stack-system;
+$base-font-size: 1rem;
+
+// Colors
+$primary-color: #341184;
+$secondary-color: #17a5ca;
+
+$dark-gray: mix(#333, $secondary-color, 93%);
+$medium-gray: mix(#666, $secondary-color, 95%);
+$off-white: mix(#f6f6f6, $secondary-color, 97%);
+
+$base-font-color: $medium-gray;
+$inverse-font-color: #fff;
+$action-color: tint($primary-color, 12%);
+
+$base-background-color: $off-white;
+$base-border-color: rgba($dark-gray, 0.1);
+$base-border: 1px solid $base-border-color;
+
+// Animations
+$base-transition: 200ms $ease-in-out-cubic;
+$slow-transition: 400ms $ease-in-out-cubic;
+$bounce-transition: 500ms $ease-in-out-back;

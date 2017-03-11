@@ -1,0 +1,36 @@
+.search-clear {
+  @include position(absolute, 0 0 0 null);
+  @include size(1rem);
+  align-items: center;
+  background-color: $action-color;
+  border: 0;
+  border-radius: 50%;
+  color: $inverse-font-color;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+  transition: box-shadow $base-transition, opacity $slow-transition, transform $bounce-transition;
+  z-index: 0;
+
+  &:focus {
+    box-shadow: 0 0 0 1.5px $base-background-color, 0 0 0 3px rgba($action-color, 0.2);
+    outline: none;
+  }
+
+  svg {
+    @include size(0.5rem);
+  }
+}
+
+.search-text {
+  &:valid ~ .search-clear {
+    opacity: 1;
+    transform: translateX(200%);
+  }
+
+  &:invalid ~ .search-clear {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}

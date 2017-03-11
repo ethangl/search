@@ -1,0 +1,25 @@
+.search-text {
+  background-color: tint($base-background-color, 44%);
+  border: 0;
+  box-shadow: 0 2px $base-border-color;
+  color: $base-font-color;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding: 0 0 0 2.5rem;
+  position: relative;
+  transition: background-color $slow-transition;
+  width: 100%;
+  z-index: 1;
+
+  &:focus {
+    background-color: #fff;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}

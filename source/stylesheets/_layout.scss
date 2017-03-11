@@ -1,0 +1,30 @@
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: $base-font-size;
+}
+
+body {
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  margin: 0;
+}
+
+main {
+  @include position(absolute, 0);
+  @include size(16rem, 2.5rem);
+  margin: auto;
+}
+
+svg {
+  fill: currentColor;
+  pointer-events: none;
+}
